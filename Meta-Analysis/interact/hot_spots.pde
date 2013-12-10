@@ -59,6 +59,10 @@ class CellTypeBins
   ArrayList percentiles = new ArrayList();
 }
 
+void mouseDoubleClicked()
+{
+  // todo: zoom in
+}
 
 class Chromosome
 {
@@ -182,7 +186,7 @@ void log(String message)
   bool loggingEnabled = false;
   if (loggingEnabled)
   {
-    println(message);
+    console.log(message);
   }
 }
 
@@ -196,20 +200,7 @@ void setup()
                         10, 20, width-10, height-25);
     
   hotCutoffSlider = new HScrollbar(0, height-8, width, 16, 1);
-  
-  println("Drag to pan and double click to zoom");  
 }
-
-/*void mouseScrolled()
-{
-  // https://processing-js.lighthouseapp.com/projects/41284/tickets/230-mouse-scroll-wheel-support
-  
-  if (mouseScroll > 0) {
-    log("zoom in");
-  } else if (mouseScroll < 0) {
-    log("zoom out");
-  }
-}*/
 
 void draw()
 {
